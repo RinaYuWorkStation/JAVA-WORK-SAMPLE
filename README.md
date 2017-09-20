@@ -4,7 +4,7 @@ For viewing of recruiters. This is a multi-process resource allocation simulatio
 
 
 To run, download files 
-put input into the input file (already in)
+put input into the input file (already in, for more input refer to moreInput.txt)
 compile by javac main.java
 run by java main
 
