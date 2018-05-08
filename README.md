@@ -23,13 +23,13 @@ Input contains: T, # tasks, and R, # resource types and # units of each resource
 ## **Initiate** activity: string, 4 integers
 -	initiate task-number delay resource-type initial-claim
 
-The **request** and **release** activities are written
+## The **request** and **release** activities are written
 -	request task-number delay resource-type number-requested*
 -	release task-number delay resource-type number-released
 
 the delay represents the number of cycles between the completion of the previous activity for this process and the the beginning of current activity. 
 
-**terminate**:
+## **terminate** activity:
 -	terminate task-number delay unused unused
 
 
