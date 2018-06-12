@@ -32,5 +32,80 @@ the delay represents the number of cycles between the completion of the previous
 ## **terminate** activity:
 -	terminate task-number delay unused unused
 
+## sample input:
+  2 1 4
+  initiate  1 0 1 4
+  request   1 5 1 1
+  release   1 5 1 1
+  terminate 1 5 0 0
+  initiate  2 0 1 4
+  request   2 5 1 1
+  release   2 5 1 1
+  terminate 2 5 0 0
+
+
+## sample output: (detailed)
+  cycle0 : task1initiate ins
+  cycle0 : task2initiate ins
+  cycle6 : task1request successful3
+  cycle6 : task2request successful2
+  cycle12 : task1release
+  cycle12 : task2release
+  cycle 18 : task1terminate ins
+  cycle 18 : task2terminate ins
+           FIFO
+  Task 1      18    0  0%
+  Task 2      18    0  0%
+  total       36    0  0%
+  cycle0 : task1initiate ins
+  cycle0 : task2initiate ins
+  cycle 1 : task1computingdelay is 4
+  cycle 1 : task2computingdelay is 4
+  Cycle 2Task 1   delay is4
+  Cycle 2Task 2   delay is4
+  Cycle 3Task 1   delay is3
+  Cycle 3Task 2   delay is3
+  Cycle 4Task 1   delay is2
+  Cycle 4Task 2   delay is2
+  Cycle 5Task 1   delay is1
+  Cycle 5Task 2   delay is1
+  cycle6 : task1request successful3
+  cycle6 : task2blocked
+  cycle7 : task2reblocked
+  cycle 7 : task1computingdelay is 4
+  Cycle 8Task 1   delay is4
+  cycle8 : task2reblocked
+  Cycle 9Task 1   delay is3
+  cycle9 : task2reblocked
+  Cycle 10Task 1   delay is2
+  cycle10 : task2reblocked
+  Cycle 11Task 1   delay is1
+  cycle11 : task2reblocked
+  cycle12 : task2reblocked
+  cycle12 : task1release
+  cycle13 : task2unblocked
+  cycle 13 : task1computingdelay is 4
+  Cycle 14Task 1   delay is4
+  cycle 14 : task2computingdelay is 4
+  Cycle 15Task 1   delay is3
+  Cycle 15Task 2   delay is4
+  Cycle 16Task 1   delay is2
+  Cycle 16Task 2   delay is3
+  Cycle 17Task 1   delay is1
+  Cycle 17Task 2   delay is2
+  Cycle 18Task 2   delay is1
+  cycle 18 : task1terminate ins
+  cycle19 : task2release
+  cycle 20 : task2computingdelay is 4
+  Cycle 21Task 2   delay is4
+  Cycle 22Task 2   delay is3
+  Cycle 23Task 2   delay is2
+  Cycle 24Task 2   delay is1
+  cycle 25 : task2terminate ins
+           Banker's
+  Task 1      18    0  0%
+  Task 2      25    7  28%
+  total       43    7  16%
+
 
 
