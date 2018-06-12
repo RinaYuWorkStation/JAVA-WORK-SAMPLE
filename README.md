@@ -33,7 +33,7 @@ the delay represents the number of cycles between the completion of the previous
 -	terminate task-number delay unused unused
 
 ## sample input:
-
+```
   2 1 4
   initiate  1 0 1 4
   request   1 5 1 1
@@ -43,10 +43,10 @@ the delay represents the number of cycles between the completion of the previous
   request   2 5 1 1
   release   2 5 1 1
   terminate 2 5 0 0
-
+```
 
 ## sample output: (detailed)
-
+```
   cycle0 : task1initiate ins
   cycle0 : task2initiate ins
   cycle6 : task1request successful3
@@ -55,7 +55,6 @@ the delay represents the number of cycles between the completion of the previous
   cycle12 : task2release
   cycle 18 : task1terminate ins
   cycle 18 : task2terminate ins
-  
            FIFO
   Task 1      18    0  0%
   Task 2      18    0  0%
@@ -109,6 +108,6 @@ the delay represents the number of cycles between the completion of the previous
   Task 1      18    0  0%
   Task 2      25    7  28%
   total       43    7  16%
-
+```
 
 
